@@ -2,12 +2,29 @@
 
 
 
-function passwordCreator() {
+
     $password = '';
-    for ($i = 0; $i < 8; $i++) {
-        $password .= rand(0, 9);
+
+
+    if(isset($_GET['length'])) {
+        
+        $uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $lowercase = 'abcdefghijklmnopqrstuvwxyz';
+        $numbers = '0123456789';
+        $symbols = '!@#$%^&*()_+-=<>?';
+    
+        $alloptions = $uppercase . $lowercase . $numbers . $symbols;
+        // echo $alloptions;
+        
+        
+    
+    
+        for ($i = 0 ; $i < $_GET['length']; $i++){
+            $randomOption= rand(0, strlen($alloptions) - 1);
+        $randomUnit= substr($alloptions, $randomOption, 1);
+           $password .= $randomUnit;
+            
+        }
     }
-    return $password;
-}
 
 ?>
