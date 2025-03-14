@@ -26,7 +26,14 @@ if ($password != "") {
         <h1>Generatore di Password</h1>
         
         <form action="">
-            <input type="number" name="length" class="form-control m-2" placeholder="Lunghezza Password" min="2" max="20">
+            <input type="number" name="length" class="form-control m-2" placeholder="Lunghezza Password" value="5" min="2" max="20">
+
+            <div>
+
+                <input id='letters' type="checkbox" name="letters"  class="m-2"> <label for='letters'>Lettere</label>
+                <input id='numbers' type="checkbox" name="numbers"  class="m-2"> <label for='numbers'>Numeri</label>                
+                <input id='symbols' type="checkbox" name="symbols"  class="m-2"> <label for='sybols'>Simboli</label>
+            </div>
             <button class="btn btn-primary m-2">genera</button>
         </form>
 

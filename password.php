@@ -15,6 +15,7 @@ $password = $_SESSION['password'];
     <title>Password</title>
 </head>
 <body>
+    <a href="./index.php">Torna</a>
     <h1>Questa e la tua password </h1>
     <strong><?php echo $password ?></strong>
 </body>

@@ -8,12 +8,25 @@
 
     if(isset($_GET['length'])) {
         
-        $uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $lowercase = 'abcdefghijklmnopqrstuvwxyz';
+        $letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
         $numbers = '0123456789';
         $symbols = '!@#$%^&*()_+-=<>?';
+
+        $alloptions = '';
+
+
+        if(isset($_GET['letters']) && $_GET['letters'] == 'on'){
+            $alloptions .= $letters;
+        }
+        if(isset($_GET['numbers']) && $_GET['numbers'] == 'on'){
+            $alloptions .= $numbers;
+        } if(isset($_GET['symbols']) && $_GET['symbols'] == 'on'){
+            $alloptions .= $symbols;
+        }
+
+      
     
-        $alloptions = $uppercase . $lowercase . $numbers . $symbols;
+        // $alloptions = $letters . $numbers . $symbols;
         // echo $alloptions;
         
         
