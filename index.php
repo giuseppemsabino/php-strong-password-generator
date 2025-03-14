@@ -2,6 +2,12 @@
    
 require_once 'functions.php';
 
+if ($password != "") {
+    session_start();
+    $_SESSION['password'] = $password;
+    header("Location: ./password.php");
+}
+
 
 ?>
 
